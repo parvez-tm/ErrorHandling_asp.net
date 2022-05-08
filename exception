@@ -1,0 +1,9 @@
+Go to webform.aspx.cs:
+
+Paste this code:
+ protected void Page_Error(object sender, EventArgs e)
+        {
+            Exception ex = Server.GetLastError();
+            Server.ClearError();
+            Server.Transfer("~/error.html");
+        }
